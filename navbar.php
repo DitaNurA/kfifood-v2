@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg custom_nav-container w-100">
 
       <a class="navbar-brand ml-3" href="index.php" style="display: flex; align-items: center;">
-        <img src="images/fevicon.png" alt="Kirana Logo" style="height: 30px; margin-right: 10px; margin-left:60px;" />
+        <img src="images/fevicon.png" alt="Kirana Logo" class="logo-img" style="" />
         <div style="line-height: 1;">
           <span style="display: block;">KIRANA FOOD</span>
           <span style="display: block;">INTERNATIONAL</span>

@@ -5,7 +5,12 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
   padding-top: 70px;
+  height: 100% !important;
+  width: 100% !important;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
 
 .layout_padding {
   padding: 90px 0;
@@ -123,6 +128,11 @@ a:focus {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
+.logo-img{
+  height: 30px; 
+  margin-right: 10px; 
+  margin-left:60px;
+}
 
 .header_section .header_bottom .container-fluid {
   padding-right: 40px;
@@ -625,6 +635,7 @@ a:focus {
   color: #ffffff;
   padding: 40px 0;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 .info_title {
@@ -665,6 +676,7 @@ a:focus {
   padding: 0;
   margin: 0;
   text-align: right;
+   
 }
 
 .footer_nav li {
@@ -688,6 +700,7 @@ a:focus {
   position: relative;
   background-color: #ffffff;
   text-align: center;
+  
 }
 
 .footer_section p {
@@ -1151,7 +1164,7 @@ a:focus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
+  background: none;
   color: #30318B;
   border: none;
   padding: 1rem;
@@ -1513,6 +1526,7 @@ a:focus {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 .slider-wrapper {
   position: relative;
