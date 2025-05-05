@@ -42,11 +42,12 @@
 </section>
 <!-- MANUFACTURING SYSTEM SECTION -->
 <section class="manufacturing-section">
-  <div class="background-overlay">
-    <div class="container">
+  <div class="manufac-overlay-layer"></div>
+  <div class="container-manufacturing">
+    <div class="text">
       <h2>WELL FACILITATED & RESPONSIBLE<br><span>MANUFACTURING SYSTEM</span></h2>
       <p>
-        Under a stringent food safety protocol, processing are done in Kirana’s facility which complied and certified by international bodies in food production standards.
+      Under a stringent food safety protocol, processing are done in Kirana’s facility which complied and certified by international bodies in food production standards.
         To earn high quality products, we always ensure our facilities meet procedural standards and monitoring operational effectively.
         Kirana Food International uses manufacturing system that is energy saving and environmentally friendly.
       </p>
@@ -54,7 +55,7 @@
   </div>
 </section>
 <section class="facility-section">
-  <div class="facility-grid">
+  <div class="facility-grid" id="facilitySlider">
     <div class="facility-item">
       <img src="images/icon-raw.png" alt="Raw Material">
       <h3>Raw Material Capacity</h3>
@@ -86,7 +87,14 @@
       <p>Reverse Osmosis ; JIA / Chlorine Automatic Diffuser ; Filter ; UV</p>
     </div>
   </div>
+
+  <!-- Tombol navigasi di bawah grid -->
+  <div class="slider-nav">
+    <button id="prevBtn">&#8592;</button>
+    <button id="nextBtn">&#8594;</button>
+  </div>
 </section>
+
 <!-- CUSTOMER SECTION -->
 <section class="customer-section">
   <div class="container">
@@ -103,5 +111,39 @@
 </section>
 
 <?php include 'footer.php'; ?>
+<script>
+  function initSlider() {
+    const items = document.querySelectorAll('#facilitySlider .facility-item');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function updateSlider() {
+      items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateSlider();
+    });
+
+    updateSlider();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 600) {
+      initSlider();
+    }
+  });
+</script>
+
+
 </body>
 </html>

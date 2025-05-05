@@ -121,3 +121,167 @@
     max-width: 1170px;
   }
 }
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .slider_section .detail-box{
+    margin-left: 0 !important;
+    padding: 0 10px;
+
+  }
+  .container-about {
+    margin-left: 0 !important;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+  .container-product {
+    margin-left: 0 !important;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .product-text h2 {
+    font-size: 28px;
+  }
+
+  .product-text p {
+    font-size: 14px;
+  }
+  .container-contactus {
+    margin-left: 0 !important;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .contactus-text h2 {
+    font-size: 28px;
+  }
+
+  .contactus-text p {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .location-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .info-box h3 {
+    font-size: 22px;
+  }
+
+  .container-location {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .manufacturing-section .container {
+    margin-left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .manufacturing-section h2 {
+    font-size: 26px;
+  }
+
+  .manufacturing-section p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-section h2 {
+    font-size: 24px;
+  }
+
+  .customer-section p {
+    font-size: 14px;
+  }
+
+  .map-container img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .container-sustain {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sustain-text h2 {
+    font-size: 28px;
+  }
+
+  .sustain-text p {
+    font-size: 14px;
+  }
+ 
+}
+@media (max-width: 768px) {
+  .detail-product-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .product-detail {
+    width: 100%;
+    margin-left: 0;
+    order: 1;
+  }
+
+  .product-fish-section {
+    height: 30vh;
+  }
+
+  .product-fish-text h2 {
+    font-size: 28px;
+  }
+  .product-detail p {
+    font-size: 14px;
+  }
+
+  .slide-caption {
+    font-size: 1.1rem;
+  }
+  .product-slider {
+    max-width: 100%;
+    padding: 0 16px; /* opsional: beri ruang kiri-kanan */
+    margin-bottom: 30px;
+  }
+
+  .slide img {
+    height: auto;
+    max-height: 250px; /* boleh disesuaikan */
+    object-fit: cover;
+  }
+  .product-menu h3 {
+    font-size: 20px;
+  }
+  .product-menu a {
+    font-size: 16px;
+  }
+}
+
+

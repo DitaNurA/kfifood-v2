@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php include 'header.php'; ?>
+
 <body>
 <?php include 'navbar.php'; ?>
 
@@ -35,7 +36,7 @@
 </section>
 </div>
 
-<!-- WHY KIRANA SECTION -->
+<!-- WHY KIRANA SECTION -
 <section class="why-kirana">
   <div class="container">
     <h2>WHY KIRANA?</h2>
@@ -93,6 +94,74 @@
       </div>
     </div>
   </div>
+</section>-->
+<!-- WHY KIRANA SECTION -->
+<section class="why-kirana">
+  <div class="container">
+    <h2>WHY KIRANA?</h2>
+    <p>
+      At Kirana, <span class="highlight">quality is at the heart of everything we do</span>, both in our production processes and commercial activities.
+      We are committed to ensuring that every product we deliver meets the <span class="highlight">highest quality standards and conformance requirements</span>.
+      This dedication has earned us the trust of leading <span class="highlight">International Companies</span>, who rely on us as a
+      <span class="highlight">strategic production partner</span> for key global programs.
+    </p>
+
+    <div class="features-wrapper">
+      <button class="nav-btn prev" onclick="prevSlide()" id="prevBtn">❮</button>
+
+      <div class="features-track" id="sliderTrack">
+        <div class="feature-box">
+          <div class="image-container">
+            <img src="images/img1.jpg" alt="Prioritize Quality">
+            <div class="overlay">
+              <p>We sell seafood for the domestic market as well as for the export market.</p>
+            </div>
+          </div>
+          <div class="title-box">
+            <h3>Prioritize Quality</h3>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="image-container">
+            <img src="images/img2.jpg" alt="High Integrity">
+            <div class="overlay">
+              <p>We trained all levels of management to always uphold integrity, honest and trust.</p>
+            </div>
+          </div>
+          <div class="title-box">
+            <h3>High Integrity</h3>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="image-container">
+            <img src="images/img3.jpg" alt="Environmentally Friendly">
+            <div class="overlay">
+              <p>We use manufacturing system that is energy saving and environmentally friendly.</p>
+            </div>
+          </div>
+          <div class="title-box">
+            <h3>Environmentally Friendly</h3>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="image-container">
+            <img src="images/img4.jpg" alt="Well Facilitated">
+            <div class="overlay">
+              <p>We always ensure our facilities meet procedural standards and monitoring operational effectively.</p>
+            </div>
+          </div>
+          <div class="title-box">
+            <h3>Well Facilitated</h3>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn next" onclick="nextSlide()" id="nextBtn">❯</button>
+    </div>
+  </div>
 </section>
 
 <!-- QUALITY IS OUR PRIORITY SECTION -->
@@ -123,5 +192,60 @@
 </section>
 
 <?php include 'footer.php'; ?>
+<script>
+  let currentSlide = 0;
+  const sliderTrack = document.getElementById('sliderTrack');
+  const featureBoxes = document.querySelectorAll('.feature-box');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function updateSlider() {
+    const viewportWidth = window.innerWidth;
+    const isMobile = viewportWidth < 768;
+
+    if (isMobile) {
+      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
+      nextBtn.style.display = currentSlide === featureBoxes.length - 1 ? 'none' : 'block';
+    } else {
+      sliderTrack.style.transform = 'none';
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
+  }
+
+  function nextSlide() {
+    if (currentSlide < featureBoxes.length - 1) {
+      currentSlide++;
+      updateSlider();
+    }
+  }
+
+  function prevSlide() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlider();
+    }
+  }
+
+  // Mobile overlay toggle on click
+  featureBoxes.forEach(box => {
+    box.addEventListener('click', function () {
+      const viewportWidth = window.innerWidth;
+      const isMobile = viewportWidth < 768;
+
+      if (isMobile) {
+        const overlay = this.querySelector('.overlay');
+        overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+      }
+    });
+  });
+
+  window.addEventListener('resize', updateSlider);
+  window.addEventListener('DOMContentLoaded', updateSlider);
+</script>
+
+
+
 </body>
 </html>

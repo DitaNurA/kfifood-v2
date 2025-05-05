@@ -23,10 +23,11 @@
                 is known for its superior quality as the meat is the juiciest with highest fat content. 
                 The main season for thisfish is from September to October and is by far the best species for mackerel. 
                 Among others, we processed Spanish Mackerel and Mackerel from Japan and Korea as well.<p>
-            <div class="product-slider">
-    <button class="prev-btn">&#8249;</button>
-
+        <div class="product-slider">
+        
+        <button class="prev-btn">&#8249;</button>
     <div class="slider-wrapper">
+    
         <div class="slider-track">
             <div class="slide">
                 <img src="images/product/mackerel/wr.png" alt="Mackerel Whole Round">
@@ -53,8 +54,8 @@
                 <h2 class="slide-caption">Mackerel Slice</h2>
             </div>
         </div>
+    
     </div>
-
     <button class="next-btn">&#8250;</button>
 </div>
         </section>

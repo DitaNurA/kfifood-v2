@@ -133,28 +133,29 @@
   if (window.innerWidth <= 600) {
     const wrapper = document.querySelector('.fish-wrapper');
 
-    // Tambahkan class swiper & struktur swiper
-    wrapper.classList.add('swiper');
-    const slideWrapper = document.createElement('div');
-    slideWrapper.className = 'swiper-wrapper';
+    // Pastikan tidak ada swiper-wrapper sebelumnya
+    if (!wrapper.classList.contains('swiper')) {
+      wrapper.classList.add('swiper');
+      const slideWrapper = document.createElement('div');
+      slideWrapper.className = 'swiper-wrapper';
 
-    // Pindahkan semua anak ke dalam swiper-wrapper
-    [...wrapper.children].forEach(child => {
-      child.classList.add('swiper-slide');
-      slideWrapper.appendChild(child);
-    });
+      [...wrapper.children].forEach(child => {
+        child.classList.add('swiper-slide');
+        slideWrapper.appendChild(child);
+      });
 
-    wrapper.innerHTML = '';
-    wrapper.appendChild(slideWrapper);
+      wrapper.innerHTML = '';
+      wrapper.appendChild(slideWrapper);
 
-    // Inisialisasi Swiper
-    new Swiper('.swiper', {
-      slidesPerView: 2.2,
-      spaceBetween: 20,
-      freeMode: true
-    });
+      new Swiper('.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+        freeMode: true
+      });
+    }
   }
 </script>
+
 
 
 </body>
